@@ -14,7 +14,7 @@
     <p> for book reviews? Maybe, for testing stuff</p>
     <p>Testing to build an API to allow for embedding</p>
 
-    <iframe style="height:530px;width:100%" src="http://127.0.0.1:5000/external/gendescmap/a476810988/a441572082?height=500&" frameborder="0" sandbox='allow-scripts'></iframe>
+    <iframe style="height:530px;width:100%" src="http://127.0.0.1:5000/external/gendescmap/a476810988/a441572082?height=500&" id="iframe3" frameborder="0" sandbox='allow-scripts'></iframe>
     <iframe style="height:530px;width:100%" src="http://127.0.0.1:5000/external/gentable/a926023320?height=500&lengthChange=0&paging=0&info=0&search=0&" frameborder="0" sandbox='allow-scripts'></iframe>
 
     
@@ -23,5 +23,5 @@
 </html>
 
 <script>
-    //onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
+    document.getElementById("iframe3").onload=(function(this){this.style.height=this.contentWindow.document.body.scrollHeight+"px";})
 </script>
