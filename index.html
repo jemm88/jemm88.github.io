@@ -23,5 +23,5 @@
 </html>
 
 <script>
-    document.getElementById("iframe3").onload=(function(this){this.style.height=this.contentWindow.document.body.scrollHeight+"px";})
+    document.getElementById("iframe3").onload=(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this))
 </script>
