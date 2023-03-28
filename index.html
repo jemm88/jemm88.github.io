@@ -17,11 +17,24 @@
     <iframe style="height:530px;width:100%" src="http://127.0.0.1:5000/external/gendescmap/a476810988/a441572082?height=500&" id="iframe3" frameborder="0" sandbox='allow-scripts'></iframe>
     <iframe style="height:530px;width:100%" src="http://127.0.0.1:5000/external/gentable/a926023320?height=500&lengthChange=0&paging=0&info=0&search=0&" frameborder="0" sandbox='allow-scripts'></iframe>
 
-    
+    <button onclick="setHeight()">resize</button>
+    <iframe style="height:430px;width:100%" src="http://127.0.0.1:5000/external/gendescmap/a764858072/a740274109?height=400&" id="iframetesting" frameborder="0"></iframe>
+
 
 </body>
 </html>
 
+
 <script>
-    document.getElementById("iframe3").onload=(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this))
-</script>
+    var iframe3display = document.getElementById("iframetesting")
+    iframe3display.addEventListener('load', function() {
+      iframe3display.style.height=iframe3display.contentWindow.document.body.scrollHeight+"px";
+  }, false);
+      
+    function setHeight() {
+      let iframe3 = document.getElementById("iframetesting")
+      console.log(iframe3.contentWindow.document.body.scrollHeight)
+    }
+
+
+  </script>
